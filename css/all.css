@@ -1,0 +1,201 @@
+@import url(http://allfont.ru/allfont.css?fonts=a_avantebs);
+@import url(http://allfont.ru/allfont.css?fonts=a_avantebsnr-light);
+@import url(http://allfont.ru/allfont.css?fonts=futura-normal);
+@import url(http://allfont.ru/allfont.css?fonts=futura-narrow-bold);
+@import url(http://allfont.ru/allfont.css?fonts=roboto-regular);
+
+@keyframes MyAni3{
+	from {width: 100%;}
+	
+	to{width: 0%;}
+}
+@keyframes MyAni4{
+	from {width: 0%;}
+	
+	to{width: 100%;}
+}
+
+@media (max-width:900px){
+	ul#menu li a{
+		padding: 1em 1em;
+		border: white solid 1px;
+		color: black !important;
+	}
+
+	ul li.active a::after{
+
+		background: black;
+	}
+
+
+
+	#menu {
+		/* пункты меню скрыты */
+		display: none;
+		padding: 0;
+		margin: 0;
+		background-color: white;
+		
+	  }
+	  ul#menu li {
+		/* пункты меню расположены вертикально */
+		/* каждый имеет ширину 100% */
+		font-size: 1em;
+		display: block;
+		width: 100%;
+		
+		}
+		
+
+
+
+	 
+	  .toggle-button {
+		text-align: center;
+		display: block !important;
+		/* не забываем явно указать каким должен быть курсор */
+		cursor: pointer;
+		background-color: #333;
+		
+		color: #fff;
+	  }
+
+	  .toggle-button:after {
+		
+		content: '\2261';
+		cursor: pointer;
+		padding: 15px;
+		font-size: 1.5em;
+		text-align: center;
+	}
+	#menu-checkbox:checked + .menu .toggle-button:after {
+		content: "\2261";
+	}
+	
+
+
+
+
+	 /* .toggle-button:after {
+		 получаем данные из атрибута data-open в html 
+		content: attr(data-open);
+		display: block;
+		margin: 10px 0;
+		padding: 10px 30px;
+	  }*/
+	  #menu-checkbox:checked + nav[role="navigation"] #menu {
+		/* когда чекбокс активен меню становится видимым */
+		display: block !important;
+	  }
+	  /*#menu-checkbox:checked + nav[role="navigation"] .toggle-button:after {
+		content: attr(data-close);
+	  }*/
+}
+
+body{    
+    margin: 0px;
+	font-size: 100%;
+    
+	font-family:  'a_AvanteBs', arial;
+}
+
+.Header{
+	position:fixed;
+	z-index: 70;
+}
+
+#donat{
+	text-align:center;
+	position:fixed;
+	z-index: 69;
+	width : 14em;
+	height :6em;
+	color:white;
+	right:5em;
+	padding: 10px 20px;
+	background-color:cornflowerblue;
+	
+}
+
+#donat div{
+	border: white solid 4px;
+}
+
+#donat p{
+	margin:0px;
+}
+
+
+
+#donat a{
+	margin-top:10px;
+	color:white;
+	font-size:1em;
+}
+
+#sum{
+	font-size:2.4em;
+}
+
+#menu{
+	
+	top: 10px;
+	/*position:fixed;
+	z-index: 70;*/
+}
+#menu li {
+text-align: center;
+
+display: inline-block;
+
+}
+
+#menu li:hover{
+	
+	opacity: 0.7;
+}
+
+#menu li a{
+	display: block;
+	/*margin: 1em 1em;*/
+	letter-spacing: 0.1em;
+	text-decoration:none;
+	color:white;	
+	font-size:1em;
+	position: relative;
+	
+}
+
+li.active a:focus {
+	 outline: none;
+}
+
+li.active a::after{
+	content: "";
+	width: 100%; 
+	height: 3px;
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	background: white;
+}
+
+
+.toggle-button {
+	/* label скрыт */
+	display: none;
+  }
+
+  #menu-checkbox {
+	/* чекбокс скрыт */
+	display: none;
+  }
+
+.page_div{
+	height:100%;
+}
+
+.headDIV {
+	background:url(/pictures/head.jpg);
+	height:75px;
+}

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="/favicon.ico">
+        <meta charset="utf-8"/>
+        <title>Варежкино</title>
+
+        <link rel="stylesheet" type="text/css" href="/css/jquery.fullPage.css" />
+        <link rel="stylesheet" type="text/css" href="/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="/css/all.css" />
+           <link rel="stylesheet" href="/css/custom_scrollbar.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="/js/custom_scrollbar.min.js"></script>
+
+        <!-- Следующая строчка опциональна. Необходима лишь в случае, если вы используете опцию css3:false и хотите использовать другие анимационные эффекты, кроме "linear", "swing" или "easeInOutCubic". -->
+        <!--<script src="vendors/jquery.easings.min.js"></script>-->
+
+
+        <!-- Следующая строчка опциональна, необходима лишь в случае, если вы хотите использовать опцию `scrollOverflow:true` -->
+        <!--<script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>-->
+
+        <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+    </head>
+    <body>
+           <div class="Header"> <!--<header>-- шапка -->
+                <input type="checkbox" id="menu-checkbox" />
+        <nav role="navigation">
+               <label for="menu-checkbox" class="toggle-button" data-open="Menu" data-close="Close" onclick></label>
+            <ul id="menu">
+                    <li data-menuanchor="home" class="active"><a href="#home">Главная</a></li>
+                    <li data-menuanchor="donation"><a href="#donation">Пожертвование</a></li>
+                    <li data-menuanchor="about"><a href="#about">О пансионате</a></li>
+                    <li data-menuanchor="foto"><a href="#foto">Фотогалерея</a></li>
+                    <li data-menuanchor="news"><a href="#news">Новости</a></li>
+                    <li data-menuanchor="contacts"><a href="#contacts">Контакты</a></li>
+                    
+                </ul>
+                 
+            </nav>
+            <!--</header>--></div>
+                <div id="donat">
+                    <div style="margin-bottom: 4px; ">
+                        <p>Уже собрано</p>
+                        <p id= "sum">736 500 &#x20bd;</p>
+                    </div>
+                    <a href="#donation">Внести пожертвование</a>
+                </div>
+        <div id="fullpage">
+            <div class="section" data-anchor="home">
+            <div class="page_div" style="background: url(/pictures/1_2038x16321.jpg) 50% 35%; color:#fff">
+                <div class="headDIV_don"></div>
+                <div class="nameDIV"> 
+                    <p class="nameP">&laquo;Варежкино&raquo; </p>
+                    <p class="nameV">Пансионат</p>
+                </div>
+                <table class="place">
+                    <tr> 
+                        <td>
+                            <img src="/pictures/geo_w.svg" alt="GEO">
+                        </td>
+                        <td>
+                            <a class="a_map" href="/#modal_map" style="text-decoration:none;color:white;">
+                                Калининградская область, Зеленоградский район, <br>
+                                Янтарный городской округ, поселок Вершково, дом 1</a>
+                        </td>
+                    </tr>
+                </table>
+           </div></div>
+
+            <div class="section" data-anchor="donation"><div class="page_div donation_div" > 
+               <!-- <div class="clipped">
+                <h1>
+                        736 500 ₽
+                </h1></div>-->
+                <div class="headDIV_don"></div>
+                <!--<table class="donation_tab">
+                        <tr> 
+                            <td>Уже собрано на хорошие дела</td>
+                            <td><a class="a_map" href="#modal_map" style="">Цели сбора пожертвований</a></td></tr>
+                    </table>-->
+                    <div class="f_page">
+                        <div class="f_div">
+                            <div style="flex: 1">Уже собрано на хорошие дела</div>
+                            <div style="flex: 1"><a class="a_map" href="#modal_map">Цели сбора пожертвований</a></div>
+                        </div>
+                        <div class="f_div">
+                            <div style="flex: 7"><canvas id="cnv" width=750 height=115></canvas></div>
+                            <div style="flex: 2">Все пожертвования идут на счёт некоммерческой организации &laquo;Оказание помощи 
+                                                 и улучшение качества жизни пожилых людей и инвалидов. Помощь по жизни. Земланд&raquo;</div>
+                        </div>
+                        <div class="f_div">
+                                <div style="flex: 9;background-color: #6495ed; color: #fff" >
+                                    <form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml" style="text-align: center; ">
+                                        <input type="hidden" name="receiver" value="41001xxxxxxxxxxxx" style="display: none;">
+                                         Введите сумму<br>
+                                         <input type="sum" value="1000" name="don" style="border: white solid 3px;background-color: cornflowerblue;
+                                         width: 283px ;height: 2em; margin: 5px auto;color: #fff; font-size: 30px">
+                                         <br>
+                                         <button type="submit" style="color: #fff;background-color:lightcoral;border: none;
+                                                                         width: 22em; height: 6em;margin: 5px auto;">
+                                           <img src="/pictures/visa180_60.png" style="width: 32px"> 
+                                           <img src="/pictures/mc200_156.png" style="width: 32px"> 
+                                           <br>
+                                           <p style="margin: 0px;font-size: 1.5em;">Перевести с карты</p>
+                                         </button>
+                                         <br>
+                                         <button type="submit" style="color: #fff;background-color:lightcoral;border: none;
+                                                                        width: 22em; height: 6em;margin: 5px auto;">
+                                            <img src="/pictures/Bitcoin.120.png" style="width: 32px"> <br>
+                                            <p style="margin: 0px;font-size: 1.5em;">Перевести на BTC кошелек</p>
+                                        </button>
+                                        <p style="font-size: 0.8em">также мы принимаем оплату <a>по реквизитам</a></p>
+                                    </form>
+                                    
+                                </div>
+                                <div style="flex: 1"></div>
+                                <div style="flex: 9">
+                                        Наши задачи:
+                                    <ul class="li_slash" >
+                                        <li> Повышение качества жизни людей пожилого возраста</li>
+                                        <li> Поддержание жизнедеятельности и активности</li>
+                                        <li> Оптимизация среды жизнедеятельности</li>
+                                        <li> Психологическая, жуховная и реабилитационная помощь</li>
+                                    </ul> 
+                                                 
+                                                 
+                                                 
+
+                                                 <a>Стоимость проживания</a> 
+
+                                                 <p style="border: #6495ed solid 2px"> Весь персонал нашего пансиона для пожилых людей «Варежкино» 
+                                                  имеет искреннее желание заботиться о ваших родных и помочь всем 
+                                                  тем людям, с которыми мы сталкиваемся по роду своей деятельности.</p>
+                                </div>
+                        </div>
+
+                    </div>
+               
+
+            </div></div>
+
+            <div class="section" data-anchor="about"><div class="page_div" > <div class="headDIV"></div>
+                <div class="nameDIV" style="color:#000"> 
+                    <p class="nameP">&laquo;Варежкино&raquo; </p>
+                    <p class="nameV">О пансионате</p>
+                    <div class="f_page">
+                        <div class="f_div">
+                            <div style="flex: 3">
+                                <p>Существует большое количество пожилых людей, состояние и заболевания которых не позволяют им вести
+                                    самостоятельный образ жизни. Уход за такими больными требует огромного терпения и наличия
+                                     профессиональных навыков.
+                                </p>    
+                               <p>
+                                   Мы создали частный пансион Варежкино для профессионального ухода для престарелыми людьми.
+                                   Только в такой форме возможно полноценное и комплексное обеспечение ухода за пожилыми и больными
+                                   людьми, создание достойных и комфортных условий жизни.
+                               </p>
+                            </div>
+                            <div style="flex: 2"></div>
+                        </div>
+                        <div class="f_div">
+                            <div style="flex: 2">
+                                <table style="color:#000">
+                                    <tr> <td><img src="/pictures/geo.svg" alt="GEO" style="height: 50px;"></td>
+                                        <td><a class="a_map" href="/#modal_map" style="text-decoration:none;color:#000;">Калининградская область, Зеленоградский район, <br>
+                                        Янтарный городской округ, поселок Вершково, дом 1</a></td>
+                                    </tr>
+                                    <tr> <td><img src="/pictures/signs.svg" alt="GEO" style="height: 50px;"></td>
+                                        <td><a class="a_map" href="/#modal_map" style="text-decoration:none;color:#000;"> До нас можно добраться на автобусе №120  Калининград-Янтарный до остановки Покровское, затем по 
+                                            проселочной дороге 1 км пешком.</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div style="flex: 3" >
+                                <a href="https://yandex.ru/maps/?um=constructor%3Aaff4877b3e26d9840c22ae96b38fdc8be9572588d2cacea45704bec074be1317&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Aaff4877b3e26d9840c22ae96b38fdc8be9572588d2cacea45704bec074be1317&amp;width=600&amp;height=200&amp;lang=ru_RU" alt="" style="border: 0;" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                   
+                        
+                </div>
+            </div></div>
+
+            <div class="section" data-anchor="foto">
+            <div class="page_div" >
+                <div class="headDIV"></div>
+                <div class="nameDIV" style="color:#000"> 
+                        <p class="nameP">&laquo;Варежкино&raquo; </p>
+                        <p class="nameV">Фотогалерея</p>
+
+                    </div>
+                     
+                    <div class="parent">
+                            <div class="child">
+                                    <img src='/images/1.jpg' style='height:100%' class='round'>
+                            </div>
+
+                            <div class="child">
+                            <div class="child_h">
+                                    <img src='/images/2.jpg' style='height:100%' class='round'>
+                            </div>
+                            <div class="child_h">
+                                <img src='/images/3.jpg' style='height:100%' class='round'>
+                            </div>
+                            </div>
+                            <div class="child">
+                                <div class="child_h">
+                                    <img src='/images/4.jpg' style='height:100%' class='round'>
+                            </div>
+                            <div class="child_h">
+                                <img src='/images/5.jpg' style='height:100%' class='round'>
+                            </div>
+                            </div>
+                            <div class="child">
+                                <img src='/images/6.jpg' style='height:100%' class='round'>
+                            </div>
+                            <div class="child">
+                                <div class="child_h">
+                                    <img src='/images/7.jpg' style='height:100%' class='round'>
+                            </div>
+                            <div class="child_h">
+                                <img src='/images/8.jpg' style='height:100%' class='round'>
+                            </div>
+                            </div>
+                            <div class="child">
+                                <img src='/images/9.jpg' style='height:100%' class='round'>
+                            </div>
+                            <div class="child">
+                                
+                                    <div class="child_h">
+                                        <img src='/images/10.jpg' style='height:100%' class='round'>
+                                </div>
+                                <div class="child_h">
+                                    <img src='/images/11.jpg' style='height:100%' class='round'>
+                                </div>
+                            </div>
+                            <div class="child">
+                                <img src='/images/12.jpg' style='height:100%' class='round'>
+                            </div>
+                            <div class="child">
+                                
+                                <div class="child_h">
+                                        <img src='/images/13.jpg' style='height:100%; ' class='round'>
+                                </div>
+                            </div>
+                           
+                        </div>
+            </div>
+            </div>
+
+            <div class="section" data-anchor="news">
+            <div class="page_div" >
+                <div class="headDIV"></div>
+                <div class="nameDIV" style="color:#000"> 
+                        <p class="nameP">&laquo;Варежкино&raquo; </p>
+                        <p class="nameV">Новости</p>
+                </div>
+                <div class="news">
+                    <a class="new" style="background: url(/images/14.png) center; background-size: cover;"  href="/news/2018-02-26.html">
+                        
+                        </a>
+                    <a class="new" style="background: url(/images/14.jpg) center; background-size: cover;" href="/news/2017-11-11.html">
+
+                    </a>
+                    <a class="new" style="background: url(/images/17.jpg) center;background-size: cover;" href="/news/2017-11-01.html">
+
+                    </a>
+                    <a class="new" style="background: url(/images/5.jpg) center;background-size: cover;" href="/news/2017-08-29.html">
+
+                    </a>
+                    <a class="new" style="background: url(/images/18.jpg) center;background-size: cover;" href="/news/2017-07-31.html">
+
+                    </a>
+                </div>
+                <!--аНИМАЦИЯ-->
+
+            </div>
+            </div>
+
+            <div class="section" data-anchor="contacts">
+            <div class="page_div" >
+                <div class="headDIV"></div>
+                <div class="nameDIV" style="color:#000"> 
+                        <p class="nameP">&laquo;Варежкино&raquo; </p>
+                        <p class="nameV">Контакты</p>
+                    </div>
+
+                    <div  class="contacts_page">
+                    <div class="contacts">
+                        <div class="contact">
+                           
+                                <img src="/pictures/morozov.jpg" alt="Морозов Игорь Викторович" style="width: 150px; height: 200px;">
+                                <div class="contact_info">
+                                    
+                                      
+                                    <a><b>Морозов Игорь Викторович</b></a>
+                                    <p> Руководитель проекта, врач общей практики</p>
+                                    <p>Тел.: +7 (911) 493-54-71</p>
+                                    <p>E-mail: <a href="mailto:morozov_igor67@yahoo.com">morozov_igor67@yahoo.com</a></p>
+                                
+                            </div>
+                        </div>    
+                        <div class="contact">
+                            
+                                <img src="/pictures/sadovnikova.jpg" alt="Садовникова Елизавета Константиновна" style="width: 150px; height: 200px;">
+                               
+                                <div class="contact_info">
+                                    <a><b>Садовникова Елизавета Константиновна</b></a>
+                                    <p>Управляющая Усадьбой &laquo;Варежкино&raquo;</p>
+                                    <p>Тел.: +7 911 855 66 94 +7 906 237 57 25</p>
+                                    <p>E-mail: <a href="mailto: warshken@yandex.ru"> warshken@yandex.ru</a></p>
+                                </div>
+                            
+                        </div>   
+                    </div>
+                    <div  class="contact_page">
+                            <table style="color:#000">
+                                    <tr> <td><img src="/pictures/sm.svg" alt="PHONE" style="height: 50px;"></td>
+                                        <td><p style="text-decoration:none;color:#000;margin: 0px;"><b>Телефоны для СМИ :</b> <br><br>+7(981)896-50-62, +7(981)463-78-12</p></td>
+                                    </tr>
+                                    <tr> <td><img src="/pictures/geo.svg" alt="GEO" style="height: 50px;"></td>
+                                        <td><a class="a_map" href="/#modal_map" style="text-decoration:none;color:#000;">Калининградская область, Зеленоградский район, <br>
+                                        Янтарный городской округ, поселок Вершково, дом 1</a></td>
+                                    </tr>
+                                    <tr> <td><img src="/pictures/signs.svg" alt="GEO" style="height: 50px;"></td>
+                                        <td><a class="a_map" href="/#modal_map" style="text-decoration:none;color:#000;"> До нас можно добраться на автобусе №120  Калининград-Янтарный до остановки Покровское, затем по 
+                                            проселочной дороге 1 км пешком.</a></td>
+                                    </tr>
+                                </table>
+                    </div>
+                
+                </div>
+            </div>
+            </div>
+            <!-- подчеркивания!!!-->
+        </div>
+
+        <div id="modal_map"><!-- Сaмo oкнo --> 
+            <span id="modal_close">X</span> <!-- Кнoпкa зaкрыть --> 
+            <a href="https://yandex.ru/maps/?um=constructor%3Aaff4877b3e26d9840c22ae96b38fdc8be9572588d2cacea45704bec074be1317&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Aaff4877b3e26d9840c22ae96b38fdc8be9572588d2cacea45704bec074be1317&amp;width=600&amp;height=450&amp;lang=ru_RU" alt="" style="border: 0;" /></a>
+            <!-- Тут любoе сoдержимoе -->
+        </div>
+        <div id="overlay"></div><!-- Пoдлoжкa -->
+
+<script type="text/javascript">
+    $(document).ready(function() { // вся мaгия пoсле зaгрузки стрaницы
+	$('a.a_map').click( function(event){ // лoвим клик пo ссылки с id="go"
+		event.preventDefault(); // выключaем стaндaртную рoль элементa
+		$('#overlay').fadeIn(400, // снaчaлa плaвнo пoкaзывaем темную пoдлoжку
+		 	function(){ // пoсле выпoлнения предъидущей aнимaции
+				$('#modal_map') 
+					.css('display', 'block') // убирaем у мoдaльнoгo oкнa display: none;
+					.animate({opacity: 1, top: '50%'}, 200); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
+		});
+	});
+	/* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
+	$('#modal_close, #overlay').click( function(){ // лoвим клик пo крестику или пoдлoжке
+		$('#modal_map')
+			.animate({opacity: 0, top: '45%'}, 200,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
+				function(){ // пoсле aнимaции
+					$(this).css('display', 'none'); // делaем ему display: none;
+					$('#overlay').fadeOut(400); // скрывaем пoдлoжку
+				}
+			);
+	});
+});
+</script>
+
+
+        <script>$(document).ready(function() {
+            $('#fullpage').fullpage({
+                anchros:['main', 'donation','about','foto','news','contacts'],
+                menu:'#menu',
+                
+
+
+                onLeave: function(index, nextIndex, direction){
+		        var leavingSection = $(this);
+
+		            //после покидания раздела 2
+		            if(nextIndex == 2) {
+                        
+				$('#donat').animate({opacity: 0, top: '50%'}, 400, function(){ // пoсле aнимaции
+					$(this).css('display', 'none')}); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
+		
+			           
+                        var menu = document.getElementById("menu");
+                        var allA = menu.getElementsByTagName("a");
+                        for (var i = 0; i < allA.length; i++) {
+                            allA[i].style.color = "#000";
+                        }
+
+		            }
+                    if(index == 2) {
+			        $('#donat').css('display', 'block') // убирaем у мoдaльнoгo oкнa display: none;
+					.animate({opacity: 1, top: '0%'}, 400);
+                        var menu = document.getElementById("menu");
+                        var allA = menu.getElementsByTagName("a");
+                            for ( var i = 0; i < allA.length; i++) {
+                                allA[i].style.color = "#fff";
+                        }
+		            }
+		           
+	            }
+            });
+        });</script>
+        <script>
+            var canvas = document.getElementById('cnv');
+             var ctx = canvas.getContext("2d");
+ 
+
+            var img = document.createElement('img');
+    	    img.onload = function () {
+            ctx.fillStyle = ctx.createPattern(img, 'repeat');
+            ctx.font = 'bold 150px sans-serif';
+            ctx.fillText("736 500  ₽", 10, 110);
+    	};
+          img.src = '/pictures/head.jpg';
+            
+
+        </script>
+        <script>
+                $(window).load(function(){
+                $("div.parent").mCustomScrollbar({
+                      //1060
+                    axis:"x" ,
+                theme:"dark-3"
+                });
+                });
+                </script>
+    </body>
+</html>
