@@ -37,23 +37,32 @@
                 </ul>
                  
             </nav>
+
+            <div id="donat">
+                <div style="margin-bottom: 4px; ">
+                    <p>Уже собрано</p>
+                    <p id= "sum">736 500 &#x20bd;</p>
+                </div>
+                <a href="#donation">Внести пожертвование</a>
+            </div>
+
             <!--</header>--></div>
-                <div id="donat">
+                <!--<div id="donat">
                     <div style="margin-bottom: 4px; ">
                         <p>Уже собрано</p>
                         <p id= "sum">736 500 &#x20bd;</p>
                     </div>
                     <a href="#donation">Внести пожертвование</a>
-                </div>
+                </div>-->
         <div id="fullpage">
-            <div class="section" data-anchor="home">
-            <div class="page_div" style="background: url(/pictures/1_2038x16321.jpg) 50% 35%; color:#fff">
+            <div class="section" data-anchor="home"  style="background: url(/pictures/1_2038x16321.jpg) 50% 35%;">
+            <div class="page_div" style=" color:#fff">
                 <div class="headDIV_don"></div>
                 <div class="nameDIV"> 
                     <p class="nameP">&laquo;Варежкино&raquo; </p>
                     <p class="nameV">Пансионат</p>
                 </div>
-                <table class="place">
+                <table class="place mobile_none">
                     <tr> 
                         <td>
                             <img src="/pictures/geo_w.svg" alt="GEO">
@@ -79,16 +88,16 @@
                             <td><a class="a_map" href="#modal_map" style="">Цели сбора пожертвований</a></td></tr>
                     </table>-->
                     <div class="f_page">
-                        <div class="f_div">
+                        <div class="f_div ">
                             <div style="flex: 1">Уже собрано на хорошие дела</div>
-                            <div style="flex: 1"><a class="a_map" href="#modal_map">Цели сбора пожертвований</a></div>
+                            <div style="flex: 1" class="mobile_none"><a class="a_map" href="#modal_map"  style="color:black">Цели сбора пожертвований</a></div>
                         </div>
                         <div class="f_div">
-                            <div style="flex: 7"><canvas id="cnv" width=750 height=115></canvas></div>
+                            <div style="flex: 7 "><canvas id="cnv" width=750 height=115></canvas></div>
                             <div style="flex: 2">Все пожертвования идут на счёт некоммерческой организации &laquo;Оказание помощи 
                                                  и улучшение качества жизни пожилых людей и инвалидов. Помощь по жизни. Земланд&raquo;</div>
                         </div>
-                        <div class="f_div">
+                        <div class="f_div mobile_none">
                                 <div style="flex: 9;background-color: #6495ed; color: #fff" >
                                     <form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml" style="text-align: center; ">
                                         <input type="hidden" name="receiver" value="41001xxxxxxxxxxxx" style="display: none;">
@@ -109,28 +118,24 @@
                                             <img src="/pictures/Bitcoin.120.png" style="width: 32px"> <br>
                                             <p style="margin: 0px;font-size: 1.5em;">Перевести на BTC кошелек</p>
                                         </button>
-                                        <p style="font-size: 0.8em">также мы принимаем оплату <a>по реквизитам</a></p>
+                                        <p style="font-size: 0.8em; margin-bottom: 0px">также мы принимаем оплату <a>по реквизитам</a></p>
                                     </form>
                                     
                                 </div>
                                 <div style="flex: 1"></div>
                                 <div style="flex: 9">
-                                        Наши задачи:
+                                        <h3>Наши задачи:</h3>
                                     <ul class="li_slash" >
                                         <li> Повышение качества жизни людей пожилого возраста</li>
                                         <li> Поддержание жизнедеятельности и активности</li>
                                         <li> Оптимизация среды жизнедеятельности</li>
                                         <li> Психологическая, жуховная и реабилитационная помощь</li>
                                     </ul> 
-                                                 
-                                                 
-                                                 
+                                    <a>Стоимость проживания</a> 
 
-                                                 <a>Стоимость проживания</a> 
-
-                                                 <p style="border: #6495ed solid 2px"> Весь персонал нашего пансиона для пожилых людей «Варежкино» 
-                                                  имеет искреннее желание заботиться о ваших родных и помочь всем 
-                                                  тем людям, с которыми мы сталкиваемся по роду своей деятельности.</p>
+                                <p style="border: #6495ed solid 2px"> Весь персонал нашего пансиона для пожилых людей «Варежкино» 
+                                имеет искреннее желание заботиться о ваших родных и помочь всем 
+                                тем людям, с которыми мы сталкиваемся по роду своей деятельности.</p>
                                 </div>
                         </div>
 
@@ -139,7 +144,7 @@
 
             </div></div>
 
-            <div class="section" data-anchor="about"><div class="page_div" > <div class="headDIV"></div>
+            <div class="section mobile_none " data-anchor="about"><div class="page_div" > <div class="headDIV"></div>
                 <div class="nameDIV" style="color:#000"> 
                     <p class="nameP">&laquo;Варежкино&raquo; </p>
                     <p class="nameV">О пансионате</p>
@@ -172,7 +177,7 @@
                                 </table>
                             </div>
                             <div style="flex: 3" >
-                                <a href="https://yandex.ru/maps/?um=constructor%3Aaff4877b3e26d9840c22ae96b38fdc8be9572588d2cacea45704bec074be1317&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Aaff4877b3e26d9840c22ae96b38fdc8be9572588d2cacea45704bec074be1317&amp;width=600&amp;height=200&amp;lang=ru_RU" alt="" style="border: 0;" /></a>
+                                <a href="https://yandex.ru/maps/?um=constructor%3Aaff4877b3e26d9840c22ae96b38fdc8be9572588d2cacea45704bec074be1317&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Aaff4877b3e26d9840c22ae96b38fdc8be9572588d2cacea45704bec074be1317&amp;width=600&amp;height=150&amp;lang=ru_RU" alt="" style="border: 0;" /></a>
                             </div>
                         </div>
                     </div>
@@ -186,7 +191,7 @@
             <div class="section" data-anchor="foto">
             <div class="page_div" >
                 <div class="headDIV"></div>
-                <div class="nameDIV" style="color:#000"> 
+                <div class="nameDIV mobile_none" style="color:#000"> 
                         <p class="nameP">&laquo;Варежкино&raquo; </p>
                         <p class="nameV">Фотогалерея</p>
 
@@ -205,7 +210,7 @@
                                 <img src='/images/3.jpg' style='height:100%' class='round'>
                             </div>
                             </div>
-                            <div class="child">
+                            <div class="child mobile_none">
                                 <div class="child_h">
                                     <img src='/images/4.jpg' style='height:100%' class='round'>
                             </div>
@@ -213,10 +218,10 @@
                                 <img src='/images/5.jpg' style='height:100%' class='round'>
                             </div>
                             </div>
-                            <div class="child">
+                            <div class="child mobile_none">
                                 <img src='/images/6.jpg' style='height:100%' class='round'>
                             </div>
-                            <div class="child">
+                            <div class="child mobile_none">
                                 <div class="child_h">
                                     <img src='/images/7.jpg' style='height:100%' class='round'>
                             </div>
@@ -224,10 +229,10 @@
                                 <img src='/images/8.jpg' style='height:100%' class='round'>
                             </div>
                             </div>
-                            <div class="child">
+                            <div class="child mobile_none">
                                 <img src='/images/9.jpg' style='height:100%' class='round'>
                             </div>
-                            <div class="child">
+                            <div class="child mobile_none">
                                 
                                     <div class="child_h">
                                         <img src='/images/10.jpg' style='height:100%' class='round'>
@@ -236,10 +241,10 @@
                                     <img src='/images/11.jpg' style='height:100%' class='round'>
                                 </div>
                             </div>
-                            <div class="child">
+                            <div class="child mobile_none">
                                 <img src='/images/12.jpg' style='height:100%' class='round'>
                             </div>
-                            <div class="child">
+                            <div class="child mobile_none">
                                 
                                 <div class="child_h">
                                         <img src='/images/13.jpg' style='height:100%; ' class='round'>
@@ -253,25 +258,30 @@
             <div class="section" data-anchor="news">
             <div class="page_div" >
                 <div class="headDIV"></div>
-                <div class="nameDIV" style="color:#000"> 
+                <div class="nameDIV mobile_none " style="color:#000"> 
                         <p class="nameP">&laquo;Варежкино&raquo; </p>
                         <p class="nameV">Новости</p>
                 </div>
                 <div class="news">
-                    <a class="new" style="background: url(/images/14.png) center; background-size: cover;"  href="/news/2018-02-26.html">
-                        
+                    <a class="new" style="background: url(/images/14.png) center; background-size: cover;"  href="/news/2018-02-26.html" title="Масленица в Варежкино">
+                        <p>26.02.2018</p>
+                        <p>Масленица в Варежкино</p>
                         </a>
-                    <a class="new" style="background: url(/images/14.jpg) center; background-size: cover;" href="/news/2017-11-11.html">
-
+                    <a class="new" style="background: url(/images/14.jpg) center; background-size: cover;" href="/news/2017-11-11.html" title="Статья о нашем пансионате">
+                        <p>11.11.2017</p>
+                        <p>Статья о нашем пансионате</p>
                     </a>
-                    <a class="new" style="background: url(/images/17.jpg) center;background-size: cover;" href="/news/2017-11-01.html">
-
+                    <a class="new mobile_none" style="background: url(/images/17.jpg) center;background-size: cover;" href="/news/2017-11-01.html" title="Помощь Варежкино от участников фестиваля">
+                        <p>01.11.2017</p>
+                        <p>Помощь Варежкино от участников фестиваля</p>
                     </a>
-                    <a class="new" style="background: url(/images/5.jpg) center;background-size: cover;" href="/news/2017-08-29.html">
-
+                    <a class="new mobile_none" style="background: url(/images/5.jpg) center;background-size: cover;" href="/news/2017-08-29.html" title="Наше НКО стало победителем конкурса...">
+                        <p>29.08.2017</p>
+                        <p>Наше НКО стало победителем конкурса...</p>
                     </a>
-                    <a class="new" style="background: url(/images/18.jpg) center;background-size: cover;" href="/news/2017-07-31.html">
-
+                    <a class="new mobile_none" style="background: url(/images/18.jpg) center;background-size: cover;" href="/news/2017-07-31.html" title="Открытие новой площадки">
+                        <p>31.07.2017</p>
+                        <p>Открытие новой площадки</p>
                     </a>
                 </div>
                 <!--аНИМАЦИЯ-->
@@ -282,14 +292,14 @@
             <div class="section" data-anchor="contacts">
             <div class="page_div" >
                 <div class="headDIV"></div>
-                <div class="nameDIV" style="color:#000"> 
+                <div class="nameDIV mobile_none " style="color:#000"> 
                         <p class="nameP">&laquo;Варежкино&raquo; </p>
                         <p class="nameV">Контакты</p>
                     </div>
 
                     <div  class="contacts_page">
-                    <div class="contacts">
-                        <div class="contact">
+                    <div class="contacts mobile_none">
+                        <div class="contact ">
                            
                                 <img src="/pictures/morozov.jpg" alt="Морозов Игорь Викторович" style="width: 150px; height: 200px;">
                                 <div class="contact_info">
@@ -318,7 +328,11 @@
                     <div  class="contact_page">
                             <table style="color:#000">
                                     <tr> <td><img src="/pictures/sm.svg" alt="PHONE" style="height: 50px;"></td>
-                                        <td><p style="text-decoration:none;color:#000;margin: 0px;"><b>Телефоны для СМИ :</b> <br><br>+7(981)896-50-62, +7(981)463-78-12</p></td>
+                                        <td>
+                                        <!--<p style="text-decoration:none;color:#000;margin: 0px;"><b></b> <br><br>+7(981)896-50-62, +7(981)463-78-12</p>-->
+                                        <p style="margin-bottom: 8px">Телефоны для СМИ :</p>
+                                        <p>+7(981)896-50-62, +7(981)463-78-12</p>
+                                    </td>
                                     </tr>
                                     <tr> <td><img src="/pictures/geo.svg" alt="GEO" style="height: 50px;"></td>
                                         <td><a class="a_map" href="/#modal_map" style="text-decoration:none;color:#000;">Калининградская область, Зеленоградский район, <br>
@@ -327,6 +341,11 @@
                                     <tr> <td><img src="/pictures/signs.svg" alt="GEO" style="height: 50px;"></td>
                                         <td><a class="a_map" href="/#modal_map" style="text-decoration:none;color:#000;"> До нас можно добраться на автобусе №120  Калининград-Янтарный до остановки Покровское, затем по 
                                             проселочной дороге 1 км пешком.</a></td>
+                                    </tr>
+                                    <tr><td colspan="2">
+                                        <a href="https://yandex.ru/maps/?um=constructor%3Aaff4877b3e26d9840c22ae96b38fdc8be9572588d2cacea45704bec074be1317&amp;source=constructorStatic" target="_blank">
+                                            <img style="width: 100%" src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Aaff4877b3e26d9840c22ae96b38fdc8be9572588d2cacea45704bec074be1317&amp;width=400&amp;height=150&amp;lang=ru_RU" alt="" style="border: 0;" /></a>
+                                    </td>
                                     </tr>
                                 </table>
                     </div>
@@ -370,17 +389,19 @@
 
 
         <script>$(document).ready(function() {
+            var w = $('body').width;
+            var WIDTH = 1150;
             $('#fullpage').fullpage({
                 anchros:['main', 'donation','about','foto','news','contacts'],
                 menu:'#menu',
-                
+                responsiveWidth:WIDTH,
 
 
                 onLeave: function(index, nextIndex, direction){
 		        var leavingSection = $(this);
 
 		            //после покидания раздела 2
-		            if(nextIndex == 2) {
+		            if(nextIndex == 2 && w>=WIDTH) {
                         
 				$('#donat').animate({opacity: 0, top: '50%'}, 400, function(){ // пoсле aнимaции
 					$(this).css('display', 'none')}); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
@@ -393,7 +414,7 @@
                         }
 
 		            }
-                    if(index == 2) {
+                    if(index == 2 && w>=WIDTH) {
 			        $('#donat').css('display', 'block') // убирaем у мoдaльнoгo oкнa display: none;
 					.animate({opacity: 1, top: '0%'}, 400);
                         var menu = document.getElementById("menu");
