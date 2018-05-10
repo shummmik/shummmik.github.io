@@ -15,7 +15,20 @@
 	to{width: 100%;}
 }
 
-@media (max-width:900px){
+@media (max-width:1150px){
+	div.nameDIV{
+		position: static;
+	}
+
+	#fullpage .fp-section:nth-of-type(n+2),
+	.fp-tableCell:nth-of-type(n+1),
+	.fp-scrollable:nth-of-type(n+1) {
+	height: auto !important;
+	}
+
+
+
+
 	ul#menu li a{
 		padding: 1em 1em;
 		border: white solid 1px;
@@ -53,10 +66,10 @@
 	  .toggle-button {
 		text-align: center;
 		display: block !important;
-		/* не забываем явно указать каким должен быть курсор */
+		/* не забываем явно указать каким должен быть курсорheight: 100%; */
 		cursor: pointer;
 		background-color: #333;
-		
+		height:calc(1em + 20px);
 		color: #fff;
 	  }
 
@@ -66,10 +79,10 @@
 		cursor: pointer;
 		padding: 15px;
 		font-size: 1.5em;
-		text-align: center;
+		text-align: right;
 	}
 	#menu-checkbox:checked + .menu .toggle-button:after {
-		content: "\2261";
+		content: "\D7";
 	}
 	
 
@@ -83,13 +96,47 @@
 		margin: 10px 0;
 		padding: 10px 30px;
 	  }*/
+
 	  #menu-checkbox:checked + nav[role="navigation"] #menu {
 		/* когда чекбокс активен меню становится видимым */
 		display: block !important;
 	  }
-	  /*#menu-checkbox:checked + nav[role="navigation"] .toggle-button:after {
-		content: attr(data-close);
-	  }*/
+	  
+	  #menu-checkbox:checked + nav[role="navigation"] .toggle-button:after {
+		content: "\D7";
+		
+	  }
+
+	  #menu-checkbox:checked + nav[role="navigation"] .toggle-button {
+		text-align: right;
+
+	  }
+
+
+	  div#donat{
+		  height: 1em;
+		  width: 100%;
+		  margin-right: 0px;
+	  }
+	  
+	#donat div{
+	display: none;
+	}
+	#donat a{
+		font-size: 100%;
+	}
+
+	#cnv{
+		width: calc(100% - 30px);
+	}
+	f_page{
+		margin: 0px 15px;
+	}
+
+	.f_div{
+		flex-direction: column;
+		
+	}
 }
 
 body{    
@@ -100,21 +147,21 @@ body{
 }
 
 .Header{
+	justify-content:space-between;
 	position:fixed;
 	z-index: 70;
+	display: flex;
+	width: 100%;
 }
 
 #donat{
 	text-align:center;
-	position:fixed;
-	z-index: 69;
 	width : 14em;
 	height :6em;
 	color:white;
-	right:5em;
+	margin-right: 25px;
 	padding: 10px 20px;
 	background-color:cornflowerblue;
-	
 }
 
 #donat div{
@@ -157,7 +204,7 @@ display: inline-block;
 
 #menu li a{
 	display: block;
-	/*margin: 1em 1em;*/
+	margin: 0em 1em;
 	letter-spacing: 0.1em;
 	text-decoration:none;
 	color:white;	
