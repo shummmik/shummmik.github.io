@@ -391,7 +391,7 @@
 </script>
 
 
-        <script>$(document).ready(function() {
+        <script type="text/javascript">$(document).ready(function() {
             var w = $('body').width();
             var WIDTH = 1150;
             $('#fullpage').fullpage({
@@ -401,7 +401,7 @@
 
 
                 onLeave: function(index, nextIndex, direction){
-		        var leavingSection = $(this);
+		        
                
 		            //после покидания раздела 2
 		            if(nextIndex == 2 && w>=WIDTH) {
@@ -431,7 +431,7 @@
 	            }
             });
         });</script>
-        <script>
+        <script type="text/javascript">
             var canvas = document.getElementById('cnv');
              var ctx = canvas.getContext("2d");
  
@@ -446,7 +446,7 @@
             
 
         </script>
-        <script>
+        <script type="text/javascript">
                 $(window).load(function(){
                 $("div.parent").mCustomScrollbar({
                       //1060
