@@ -3,11 +3,13 @@
     <head>
         <link rel="icon" href="/favicon.ico">
         <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
         <title>Варежкино</title>
 
         <link rel="stylesheet" type="text/css" href="/css/jquery.fullPage.css" />
         <link rel="stylesheet" type="text/css" href="/css/main.css" />
         <link rel="stylesheet" type="text/css" href="/css/all.css" />
+        <link rel="stylesheet" type="text/css" href="/css/don.css" />
            <link rel="stylesheet" href="/css/custom_scrollbar.css">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="/js/custom_scrollbar.min.js"></script>
@@ -19,7 +21,7 @@
         <!-- Следующая строчка опциональна, необходима лишь в случае, если вы хотите использовать опцию `scrollOverflow:true` -->
         <!--<script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>-->
 
-        <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+        <script type="text/javascript" src="/js/jquery.fullPage.js"></script>
     </head>
     <body>
            <div class="Header"> <!--<header>-- шапка -->
@@ -28,13 +30,14 @@
                <label for="menu-checkbox" class="toggle-button" data-open="Menu" data-close="Close" onclick></label>
             <ul id="menu">
                     <li data-menuanchor="home" class="active"><a href="#home">Главная</a></li>
-                    <li data-menuanchor="donation"><a href="#donation">Пожертвование</a></li>
-                    <li data-menuanchor="about"><a href="#about">О пансионате</a></li>
-                    <li data-menuanchor="foto"><a href="#foto">Фотогалерея</a></li>
-                    <li data-menuanchor="news"><a href="#news">Новости</a></li>
-                    <li data-menuanchor="contacts"><a href="#contacts">Контакты</a></li>
+                    <li data-menuanchor="donation"><a href="/#donation">Пожертвование</a></li>
+                    <li data-menuanchor="about"><a href="/#about">О пансионате</a></li>
+                    <li data-menuanchor="foto"><a href="/#foto">Фотогалерея</a></li>
+                    <li data-menuanchor="news"><a href="/#news">Новости</a></li>
+                    <li data-menuanchor="contacts"><a href="/#contacts">Контакты</a></li>
                     
                 </ul>
+                
                  
             </nav>
 
@@ -89,7 +92,7 @@
                     </table>-->
                     <div class="f_page">
                         <div class="f_div ">
-                            <div style="flex: 1">Уже собрано на хорошие дела</div>
+                            <div style="flex: 1"><b>Уже собрано на хорошие дела</b></div>
                             <div style="flex: 1" class="mobile_none"><a class="a_map" href="#modal_map"  style="color:black">Цели сбора пожертвований</a></div>
                         </div>
                         <div class="f_div">
@@ -399,11 +402,11 @@
 
                 onLeave: function(index, nextIndex, direction){
 		        var leavingSection = $(this);
-                
+               
 		            //после покидания раздела 2
 		            if(nextIndex == 2 && w>=WIDTH) {
                         
-                        
+                       
 				$('div div#donat').animate({opacity: 0, top: '50%'}, 400, function(){ // пoсле aнимaции
 					$(this).css('display', 'none')}); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
 		
