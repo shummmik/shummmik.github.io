@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="/favicon.ico">
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>Варежкино</title>
+
+        
+        <link rel="stylesheet" type="text/css" href="/css/don.css" />
+        <link rel="stylesheet" type="text/css" href="/css/all.css" />
+         
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+    </head>
+    <body>
+           <div class="Header"> <!--<header>-- шапка -->
+                <input type="checkbox" id="menu-checkbox" />
+        <nav role="navigation">
+               <label for="menu-checkbox" class="toggle-button" data-open="Menu" data-close="Close" onclick></label>
+            <ul id="menu">
+                    <li data-menuanchor="home" class="active"><a style="color: black" href="/#home">Главная</a></li>
+                    <li data-menuanchor="donation" class="active"><a style="color: black" href="/donation.html">Пожертвование</a></li>
+                    <li data-menuanchor="about"><a style="color: black" href="/about.html">О пансионате</a></li>
+                    <li data-menuanchor="foto"><a style="color: black" href="/foto.html">Фотогалерея</a></li>
+                    <li data-menuanchor="news"><a style="color: black" href="/news.html">Новости</a></li>
+                    <li data-menuanchor="contacts"><a style="color: black" href="/contacts.html">Контакты</a></li>
+                    
+                </ul>
+                 
+            </nav>
+
+            <div id="donat">
+                <div style="margin-bottom: 4px; ">
+                    <p>Уже собрано</p>
+                    <p id= "sum">736 500 &#x20bd;</p>
+                </div>
+                <a href="/donation.html">Внести пожертвование</a>
+            </div>
+
+            <!--</header>--></div>
+                <!--<div id="donat">
+                    <div style="margin-bottom: 4px; ">
+                        <p>Уже собрано</p>
+                        <p id= "sum">736 500 &#x20bd;</p>
+                    </div>
+                    <a href="#donation">Внести пожертвование</a>
+                </div>-->
+<div class="page_div donation_div" > 
+               <!-- <div class="clipped">
+                <h1>
+                        736 500 ₽
+                </h1></div>-->
+                <div class="headDIV_don"></div>
+ 
+                    <div class="f_page">
+                        <div class="f_div ">
+                            <div style="flex: 1"><b>Уже собрано на хорошие дела</b></div>
+                            <div style="flex: 1" class="mobile_none"><a class="a_map" href="#modal_map"  style="color:black">Цели сбора пожертвований</a></div>
+                        </div>
+                        <div class="f_div">
+                            <div style="flex: 7 "><canvas id="cnv" width=750 height=115></canvas></div>
+                            <div style="flex: 2; ">Все пожертвования идут на счёт некоммерческой организации &laquo;Оказание помощи 
+                                                 и улучшение качества жизни пожилых людей и инвалидов. Помощь по жизни. Земланд&raquo;</div>
+                        </div>
+                        <div class="f_div">
+                                <div style="flex: 9;background-color: #6495ed; color: #fff; " >
+                                    <form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml" style="text-align: center; ">
+                                        <input type="hidden" name="receiver" value="41001xxxxxxxxxxxx" style="display: none;">
+                                         Введите сумму<br>
+                                         <input type="sum" value="1000" name="don" style="border: white solid 3px;background-color: cornflowerblue;
+                                         width: 283px ;height: 2em; margin: 5px auto;color: #fff; font-size: 30px">
+                                         <br>
+                                         <button type="submit" style="color: #fff;background-color:lightcoral;border: none;
+                                                                         width: 22em; height: 6em;margin: 5px auto;">
+                                           <img src="/pictures/visa180_60.png" style="width: 32px"> 
+                                           <img src="/pictures/mc200_156.png" style="width: 32px"> 
+                                           <br>
+                                           <p style="margin: 0px;font-size: 1.5em;">Перевести с карты</p>
+                                         </button>
+                                         <br>
+                                         <button type="submit" style="color: #fff;background-color:lightcoral;border: none;
+                                                                        width: 22em; height: 6em;margin: 5px auto;">
+                                            <img src="/pictures/Bitcoin.120.png" style="width: 32px"> <br>
+                                            <p style="margin: 0px;font-size: 1.5em;">Перевести на BTC кошелек</p>
+                                        </button>
+                                        <p style="font-size: 0.8em; margin-bottom: 0px">также мы принимаем оплату <a>по реквизитам</a></p>
+                                    </form>
+                                    
+                                </div>
+                                <div style="flex: 1"></div>
+                                <div style="flex: 9">
+                                        <h3>Наши задачи:</h3>
+                                    <ul class="li_slash" >
+                                        <li> Повышение качества жизни людей пожилого возраста</li>
+                                        <li> Поддержание жизнедеятельности и активности</li>
+                                        <li> Оптимизация среды жизнедеятельности</li>
+                                        <li> Психологическая, жуховная и реабилитационная помощь</li>
+                                    </ul> 
+                                    <a>Стоимость проживания</a> 
+
+                                <p style="border: #6495ed solid 2px; padding: 4px;"> Весь персонал нашего пансиона для пожилых людей «Варежкино» 
+                                имеет искреннее желание заботиться о ваших родных и помочь всем 
+                                тем людям, с которыми мы сталкиваемся по роду своей деятельности.</p>
+                                </div>
+                        </div>
+
+                    </div>
+               
+
+            </div>
+
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() { // вся мaгия пoсле зaгрузки стрaницы
+	$('a.a_map').click( function(event){ // лoвим клик пo ссылки с id="go"
+		event.preventDefault(); // выключaем стaндaртную рoль элементa
+		$('#overlay').fadeIn(400, // снaчaлa плaвнo пoкaзывaем темную пoдлoжку
+		 	function(){ // пoсле выпoлнения предъидущей aнимaции
+				$('#modal_map') 
+					.css('display', 'block') // убирaем у мoдaльнoгo oкнa display: none;
+					.animate({opacity: 1, top: '50%'}, 200); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
+		});
+	});
+	/* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
+	$('#modal_close, #overlay').click( function(){ // лoвим клик пo крестику или пoдлoжке
+		$('#modal_map')
+			.animate({opacity: 0, top: '45%'}, 200,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
+				function(){ // пoсле aнимaции
+					$(this).css('display', 'none'); // делaем ему display: none;
+					$('#overlay').fadeOut(400); // скрывaем пoдлoжку
+				}
+			);
+	});
+});
+</script>
+
+
+        
+        <script>
+            var canvas = document.getElementById('cnv');
+             var ctx = canvas.getContext("2d");
+ 
+
+            var img = document.createElement('img');
+    	    img.onload = function () {
+            ctx.fillStyle = ctx.createPattern(img, 'repeat');
+            ctx.font = 'bold 150px sans-serif';
+            ctx.fillText("736 500  ₽", 10, 110);
+    	};
+          img.src = '/pictures/head.jpg';
+            
+
+        </script>
+
+    </body>
+</html>

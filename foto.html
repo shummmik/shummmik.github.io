@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="/favicon.ico">
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>Варежкино</title>
+
+
+        
+        <link rel="stylesheet" type="text/css" href="/css/all.css" />
+        <link rel="stylesheet" type="text/css" href="/css/don.css" />
+        <link rel="stylesheet" type="text/css" href="/css/foto.css" />
+           <link rel="stylesheet" href="/css/custom_scrollbar.css">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript"  src="/js/custom_scrollbar.min.js"></script>
+
+    </head>
+    <body>
+           <div class="Header">
+                <input type="checkbox" id="menu-checkbox" />
+        <nav role="navigation">
+               <label for="menu-checkbox" class="toggle-button" data-open="Menu" data-close="Close" onclick></label>
+            <ul id="menu">
+                    <li data-menuanchor="home" class="active"><a href="/#home">Главная</a></li>
+                    <li data-menuanchor="donation"><a href="/donation.html">Пожертвование</a></li>
+                    <li data-menuanchor="about"><a href="/about.html">О пансионате</a></li>
+                    <li data-menuanchor="foto"><a href="/foto.html">Фотогалерея</a></li>
+                    <li data-menuanchor="news"><a href="/news.html">Новости</a></li>
+                    <li data-menuanchor="contacts"><a href="/contacts.html">Контакты</a></li>
+                    
+                </ul>
+                
+                 
+            </nav>
+
+            <div id="donat">
+                <div style="margin-bottom: 4px; ">
+                    <p>Уже собрано</p>
+                    <p id= "sum">736 500 &#x20bd;</p>
+                </div>
+                <a href="/donation.html">Внести пожертвование</a>
+            </div>
+
+           </div>
+
+     
+
+
+
+            <div class="page_div" >
+                <div class="headDIV"></div>
+                <div class="nameDIV mobile_none" style="color:#000"> 
+                        <p class="nameP">&laquo;Варежкино&raquo; </p>
+                        <p class="nameV">Фотогалерея</p>
+
+                    </div>
+                     
+                    <div class="parent parent_list">
+                            <div class="parent_block">
+                            <div class="child">
+                                    <img src='/images/1.jpg' style='height:100%' class='round'>
+                            </div>
+
+                            <div class="child">
+                                <div class="child_h">
+                                    <img src='/images/2.jpg' style='height:100%' class='round'>
+                                </div>
+                                <div class="child_h">
+                                    <img src='/images/3.jpg' style='height:100%' class='round'>
+                                </div>
+                            </div>
+                            </div>
+
+                            <div class="parent_block">
+                            <div class="child">
+                                <div class="child_h">
+                                    <img src='/images/4.jpg' style='height:100%' class='round'>
+                                </div>
+                                <div class="child_h">
+                                    <img src='/images/5.jpg' style='height:100%' class='round'>
+                                </div>
+                            </div>
+                            <div class="child ">
+                                <img src='/images/6.jpg' style='height:100%' class='round'>
+                            </div>
+                            </div>
+
+                            <div class="parent_block">
+                            <div class="child ">
+                                <div class="child_h">
+                                    <img src='/images/7.jpg' style='height:100%' class='round'>
+                                </div>
+                                <div class="child_h">
+                                    <img src='/images/8.jpg' style='height:100%' class='round'>
+                                </div>
+                            </div>
+                            <div class="child ">
+                                <img src='/images/9.jpg' style='height:100%' class='round'>
+                            </div>
+                            </div>
+
+                            <div class="parent_block">
+                            <div class="child">
+                                
+                                    <div class="child_h">
+                                        <img src='/images/10.jpg' style='height:100%' class='round'>
+                                </div>
+                                <div class="child_h">
+                                    <img src='/images/11.jpg' style='height:100%' class='round'>
+                                </div>
+                            </div>
+                            <div class="child ">
+                                <img src='/images/12.jpg' style='height:100%' class='round'>
+                            </div>
+                            </div>
+
+                            <div class="parent_block">
+                            <div class="child">
+                                
+                                <div class="child_h">
+                                        <img src='/images/13.jpg' style='height:100%; ' class='round'>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+            </div>
+
+
+
+
+        
+
+            <script type="text/javascript">
+
+                $(window).bind('resize', function(){ 
+                    
+                    if ($("body").width() >= 1150) {
+                        console.log($("body").width());
+                        
+                            $("div.parent").mCustomScrollbar({
+                                  //1060
+                                axis:"x" ,
+                            theme:"dark-3"
+                            });
+                            
+                    
+                    }
+                    else{
+                        $("div.parent").mCustomScrollbar('destroy');
+                    }
+                }).trigger('resize');
+                    </script>
+            
+
+    </body>
+</html>
