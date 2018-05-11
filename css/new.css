@@ -1,4 +1,8 @@
 @media (max-width:1150px){
+	 img{
+		height: 100% !important;
+		width: 100%;
+	}
 	body div.page_div{
 		padding-top: 2em;
 	}
