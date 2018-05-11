@@ -1,0 +1,47 @@
+@media (max-width:1150px){
+    div div.f_div{
+        margin: 1em;
+        flex-direction:column;
+    }
+    
+    div div.f_page{
+		margin: 5px;
+    }
+    div.f_div div a img{
+        width: 100%
+    }
+    div.headDIV_don{
+        height: 45px;
+    }
+
+    canvas#cnv{
+        width: 100%;
+    }
+}
+
+.headDIV_don{
+	height:75px;
+}
+
+
+div.f_div{
+	display:flex;
+	flex-direction:row;
+	margin: 5px 0px;
+}
+
+div.f_page{
+
+	margin: 2em 3em;
+}
+
+
+.li_slash li{
+	/*list-style: none;*/
+	list-style-image: url(/pictures/slash.svg);
+	font-size: 120%;
+}
+
+tr{
+    padding: 4px 0px;
+}
