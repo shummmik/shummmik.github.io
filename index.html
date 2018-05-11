@@ -25,7 +25,7 @@
         <nav role="navigation">
                <label for="menu-checkbox" class="toggle-button" data-open="Menu" data-close="Close" onclick></label>
             <ul id="menu">
-                    <li data-menuanchor="home" class="active"><a href="#home">Главная</a></li>
+                    <li data-menuanchor="home" class="active"><a href="/#home">Главная</a></li>
                     <li data-menuanchor="donation"><a href="/#donation">Пожертвование</a></li>
                     <li data-menuanchor="about"><a href="/#about">О пансионате</a></li>
                     <li data-menuanchor="foto"><a href="/#foto">Фотогалерея</a></li>
@@ -377,107 +377,20 @@
         </div>
         <div id="overlay"></div><!-- Пoдлoжкa -->
 
-<script type="text/javascript">
-    $(document).ready(function() { 
-	$('a.a_map').click( function(event){ // лoвим клик пo ссылки 
-		event.preventDefault(); 
-		$('#overlay').fadeIn(400,
-		 	function(){ 
-				$('#modal_map') 
-					.css('display', 'block') 
-					.animate({opacity: 1, top: '50%'}, 200); 
-		});
-	});
-	
-	$('#modal_close, #overlay').click( function(){
-		$('#modal_map')
-			.animate({opacity: 0, top: '45%'}, 200, 
-				function(){ 
-					$(this).css('display', 'none'); 
-					$('#overlay').fadeOut(400); 
-				}
-			);
-	});
-});
-</script>
+
+    <script type="text/javascript" src="/js/overlay.js"></script>   
+    <script type="text/javascript" src="/js/fullpage.js"></script>   
+    <script type="text/javascript" src="/js/canvas.js"></script> 
+    <script type="text/javascript" src="/js/scroll.js"></script> 
+
+       
 
 
-        <script type="text/javascript">$(document).ready(function() {
-            var w = $("body").width();
-            var WIDTH = 1150;
-            $('#fullpage').fullpage({
-                anchros:['main', 'donation','about','foto','news','contacts'],
-                menu:'#menu',
-                responsiveWidth: WIDTH,
 
 
-                onLeave: function(index, nextIndex, direction){
-		        
-               
-		            //после покидания раздела 2
-		            if(nextIndex == 2 && w>=WIDTH) {
-                        
-                       
-				$('div div#donat').animate({opacity: 0, top: '50%'}, 400, function(){ // пoсле aнимaции
-					$(this).css('display', 'none')}); 
-		
-			           
-                        var menu = document.getElementById("menu");
-                        var allA = menu.getElementsByTagName("a");
-                        for (var i = 0; i < allA.length; i++) {
-                            allA[i].style.color = "#000";
-                        }
-
-		            }
-                    if(index == 2 && w>=WIDTH) {
-			        $('div#donat').css('display', 'block')
-					.animate({opacity: 1, top: '0%'}, 400);
-                        var menu = document.getElementById("menu");
-                        var allA = menu.getElementsByTagName("a");
-                            for ( var i = 0; i < allA.length; i++) {
-                                allA[i].style.color = "#fff";
-                        }
-		            }
-		           
-	            }
-            });
-        });</script>
-        <script type="text/javascript">
-            var canvas = document.getElementById('cnv');
-             var ctx = canvas.getContext("2d");
- 
-
-            var img = document.createElement('img');
-    	    img.onload = function () {
-            ctx.fillStyle = ctx.createPattern(img, 'repeat');
-            ctx.font = 'bold 150px sans-serif';
-            ctx.fillText("736 500  ₽", 10, 110);
-    	};
-          img.src = '/pictures/head.jpg';
-            
-
-        </script>
 
 
-<script type="text/javascript">
 
-    $(window).bind('resize', function(){ 
-        
-        if ($("body").width() >= 1150) {
-            console.log($("body").width());
-            
-                $("div.parent").mCustomScrollbar({
-                    axis:"x" ,
-                theme:"dark-3"
-                });
-                
-        
-        }
-        else{
-            $("div.parent").mCustomScrollbar('destroy');
-        }
-    }).trigger('resize');
-        </script>
 
 
 

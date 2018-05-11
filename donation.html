@@ -4,7 +4,7 @@
         <link rel="icon" href="/favicon.ico">
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-        <title>Варежкино</title>
+        <title>Пожертвования</title>
 
         
         <link rel="stylesheet" type="text/css" href="/css/don.css" />
@@ -19,8 +19,8 @@
         <nav role="navigation">
                <label for="menu-checkbox" class="toggle-button" data-open="Menu" data-close="Close" onclick></label>
             <ul id="menu">
-                    <li data-menuanchor="home" class="active"><a style="color: black" href="/#home">Главная</a></li>
-                    <li data-menuanchor="donation" class="active"><a style="color: black" href="/donation.html">Пожертвование</a></li>
+                    <li data-menuanchor="home"><a style="color: black" href="/#home">Главная</a></li>
+                    <li data-menuanchor="donation" ><a style="color: black" href="/donation.html">Пожертвование</a></li>
                     <li data-menuanchor="about"><a style="color: black" href="/about.html">О пансионате</a></li>
                     <li data-menuanchor="foto"><a style="color: black" href="/foto.html">Фотогалерея</a></li>
                     <li data-menuanchor="news"><a style="color: black" href="/news.html">Новости</a></li>
@@ -105,47 +105,12 @@
 
 
 
-<script type="text/javascript">
-    $(document).ready(function() { // вся мaгия пoсле зaгрузки стрaницы
-	$('a.a_map').click( function(event){ // лoвим клик пo ссылки с id="go"
-		event.preventDefault(); // выключaем стaндaртную рoль элементa
-		$('#overlay').fadeIn(400, // снaчaлa плaвнo пoкaзывaем темную пoдлoжку
-		 	function(){ // пoсле выпoлнения предъидущей aнимaции
-				$('#modal_map') 
-					.css('display', 'block') // убирaем у мoдaльнoгo oкнa display: none;
-					.animate({opacity: 1, top: '50%'}, 200); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
-		});
-	});
-	/* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
-	$('#modal_close, #overlay').click( function(){ // лoвим клик пo крестику или пoдлoжке
-		$('#modal_map')
-			.animate({opacity: 0, top: '45%'}, 200,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
-				function(){ // пoсле aнимaции
-					$(this).css('display', 'none'); // делaем ему display: none;
-					$('#overlay').fadeOut(400); // скрывaем пoдлoжку
-				}
-			);
-	});
-});
-</script>
 
-
-        
-        <script>
-            var canvas = document.getElementById('cnv');
-             var ctx = canvas.getContext("2d");
+<script type="text/javascript" src="/js/overlay.js"></script>   
  
+<script type="text/javascript" src="/js/canvas.js"></script> 
 
-            var img = document.createElement('img');
-    	    img.onload = function () {
-            ctx.fillStyle = ctx.createPattern(img, 'repeat');
-            ctx.font = 'bold 150px sans-serif';
-            ctx.fillText("736 500  ₽", 10, 110);
-    	};
-          img.src = '/pictures/head.jpg';
-            
 
-        </script>
 
     </body>
 </html>

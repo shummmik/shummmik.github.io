@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="/css/don.css" />
         <link rel="stylesheet" type="text/css" href="/css/foto.css" />
            <link rel="stylesheet" href="/css/custom_scrollbar.css">
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script type="text/javascript"  src="/js/custom_scrollbar.min.js"></script>
 
     </head>
@@ -128,29 +128,7 @@
 
 
 
-
-        
-
-            <script type="text/javascript">
-
-                $(window).bind('resize', function(){ 
-                    
-                    if ($("body").width() >= 1150) {
-                        console.log($("body").width());
-                        
-                            $("div.parent").mCustomScrollbar({
-                                  //1060
-                                axis:"x" ,
-                            theme:"dark-3"
-                            });
-                            
-                    
-                    }
-                    else{
-                        $("div.parent").mCustomScrollbar('destroy');
-                    }
-                }).trigger('resize');
-                    </script>
+            <script type="text/javascript" src="/js/scroll.js"></script> 
             
 
     </body>
