@@ -1,3 +1,30 @@
+@media (max-width:1150px){
+	body div.page_div{
+		padding-top: 2em;
+	}
+	a.leftBack{
+		height: 40px;
+		width: 100%;
+		font-size: 2em;
+		opacity: 0.4;
+	}
+	a.leftBack p{
+		margin: 0px;
+	}
+	section.state {
+		margin-left: 1em;
+		margin-right: 1em;
+		padding-bottom: 40px;
+	}
+	div.nameDivN {
+		margin-left: 2em;
+	}
+	a.leftBack:hover{
+		opacity: 1;
+	}
+
+}
+
 
 .nameN{
 	font-size:2em;
@@ -52,4 +79,9 @@ ul li.active a::after{
 	bottom: 5px;
 	left: 0;
 	background: white;
+}
+
+div.page_div{
+	padding-top: 80px;
+
 }

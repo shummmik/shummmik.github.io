@@ -253,6 +253,7 @@ li.active a::after{
     top: 1em;
 	color:white;
 	margin-left:3em;
+	
 }
 
 
@@ -288,7 +289,8 @@ li.active a::after{
 	background:url(/pictures/head.jpg);
 	height:75px;
 	width: 100%;
-    position: absolute;
+	position: absolute;
+	z-index: 60;
 }
 .nameDIV{
 	padding-top: 75px;
