@@ -11,7 +11,7 @@
 		height:calc(123px / 2);
 	}
 	div div.parent{
-		width: 100%;
+		width: 170px;
 		margin-left: calc((100% - 170px) / 2);
 		margin-right: 0px;
 	}
