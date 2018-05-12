@@ -89,11 +89,11 @@
                                     </td>
                                     </tr>
                                     <tr> <td><img src="/pictures/geo.svg" alt="GEO" style="height: 50px;"></td>
-                                        <td><a class="a_map" href="/#modal_map" style="text-decoration:none;color:#000;">Калининградская область, Зеленоградский район, 
+                                        <td><a class="a_map" href="#modal_map" style="text-decoration:none;color:#000;">Калининградская область, Зеленоградский район, 
                                         Янтарный городской округ, поселок Вершково, дом 1</a></td>
                                     </tr>
                                     <tr> <td><img src="/pictures/signs.svg" alt="GEO" style="height: 50px;"></td>
-                                        <td><a class="a_map" href="/#modal_map" style="text-decoration:none;color:#000;"> До нас можно добраться на автобусе №120  Калининград-Янтарный до остановки Покровское, затем по 
+                                        <td><a class="a_map" href="#modal_map" style="text-decoration:none;color:#000;"> До нас можно добраться на автобусе №120  Калининград-Янтарный до остановки Покровское, затем по 
                                             проселочной дороге 1 км пешком.</a></td>
                                     </tr>
                                     <tr><td colspan="2">
@@ -112,12 +112,15 @@
 
 
         <div id="modal_map"><!-- Сaмo oкнo --> 
-            <span id="modal_close">X</span> <!-- Кнoпкa зaкрыть --> 
+            <span id="modal_close">
+                    <p style="margin: 5px 0 0 0;">X</p>
+                </span> <!-- Кнoпкa зaкрыть --> 
             <a href="https://yandex.ru/maps/?um=constructor%3Aaff4877b3e26d9840c22ae96b38fdc8be9572588d2cacea45704bec074be1317&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Aaff4877b3e26d9840c22ae96b38fdc8be9572588d2cacea45704bec074be1317&amp;width=600&amp;height=450&amp;lang=ru_RU" alt="" style="border: 0;" /></a>
             
         </div>
         <div id="overlay"></div><!-- Пoдлoжкa -->
 
+        <script type="text/javascript" src="/js/overlay.js"></script>   
 
     </body>
 </html>
